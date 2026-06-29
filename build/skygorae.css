@@ -22,8 +22,6 @@ body {
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
-    --panel-glow: none;
-    --panel-glow-hover: none;
     --elevation-low: none;
     --elevation-medium: none;
     --elevation-high: none;
@@ -69,14 +67,10 @@ body {
     border: var(--border-thickness) solid var(--border-subtle);
     backdrop-filter: var(--panel-backdrop-filter);
     box-sizing: border-box;
-    box-shadow: var(--panel-glow);
-    transition:
-        border-color var(--border-hover-transition),
-        box-shadow var(--border-hover-transition);
+    transition: border-color var(--border-hover-transition);
 
     &:hover {
         border-color: var(--border-hover);
-        box-shadow: var(--panel-glow-hover, var(--panel-glow));
     }
 }
 
@@ -560,12 +554,68 @@ body {
 body {
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --message-send-duration: 0.52s; /* outgoing message rise duration */
+    --context-menu-duration: 0.38s; /* each context menu row slide duration */
+    --context-menu-stagger: 30ms; /* delay between each menu row */
 }
 
 @property --animations {
     syntax: 'off | on';
     inherits: false;
     initial-value: on;
+}
+
+@property --message-send-animation {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
+}
+
+@property --context-menu-animation {
+    syntax: 'off | on';
+    inherits: false;
+    initial-value: on;
+}
+
+@container body style(--message-send-animation: on) {
+    @keyframes skygorae-send-rise {
+        0% {
+            opacity: 0;
+            transform: translateY(14px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [class*='isSending_'] {
+        animation: skygorae-send-rise var(--message-send-duration) cubic-bezier(0.85, 0, 0.15, 1) both;
+    }
+}
+
+@container body style(--context-menu-animation: on) {
+    @keyframes skygorae-menu-item-slide {
+        0% {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [class*='menu_'][role='menu'] {
+        counter-reset: skygorae-menu-row;
+    }
+
+    [class*='menu_'][role='menu'] [role='menuitem'] {
+        opacity: 0;
+        animation: skygorae-menu-item-slide var(--context-menu-duration) ease-in-out forwards;
+        animation-delay: calc((counter(skygorae-menu-row) - 1) * var(--context-menu-stagger));
+        counter-increment: skygorae-menu-row;
+    }
 }
 
 @container body style(--animations: on) {

@@ -21,8 +21,6 @@ body {
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + var(--border-thickness) * 2);
 
     --border-hover-transition: 0.2s ease;
-    --panel-glow: none;
-    --panel-glow-hover: none;
     --elevation-low: none;
     --elevation-medium: none;
     --elevation-high: none;
@@ -68,14 +66,10 @@ body {
     border: var(--border-thickness) solid var(--border-subtle);
     backdrop-filter: var(--panel-backdrop-filter);
     box-sizing: border-box;
-    box-shadow: var(--panel-glow);
-    transition:
-        border-color var(--border-hover-transition),
-        box-shadow var(--border-hover-transition);
+    transition: border-color var(--border-hover-transition);
 
     &:hover {
         border-color: var(--border-hover);
-        box-shadow: var(--panel-glow-hover, var(--panel-glow));
     }
 }
 

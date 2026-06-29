@@ -20,11 +20,14 @@ body {
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
-    --panel-glow: 0 0 10px hsla(210, 75%, 72%, 0.28), 0 0 22px hsla(280, 50%, 78%, 0.14);
-    --panel-glow-hover: 0 0 14px hsla(210, 80%, 76%, 0.42), 0 0 30px hsla(280, 55%, 82%, 0.22);
 
     /* animation/transition options */
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --message-send-animation: on; /* off: disable outgoing message pop, on: rise from below */
+    --message-send-duration: 0.52s;
+    --context-menu-animation: on; /* off: disable context menu pop, on: rows cascade from top */
+    --context-menu-duration: 0.38s;
+    --context-menu-stagger: 30ms;
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
     --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
