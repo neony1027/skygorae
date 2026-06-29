@@ -1,0 +1,15 @@
+{
+	"name": "skygorae",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "node scripts/build.js",
+		"dev": "node scripts/dev.js",
+		"serve": "node scripts/serve.js"
+	},
+	"author": "refact0r",
+	"license": "MIT",
+	"devDependencies": {
+		"chokidar": "^3.6.0",
+		"dotenv": "^16.4.5"
+	}
+}
