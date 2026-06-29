@@ -1,20 +1,20 @@
-<img width=800 src="https://github.com/neony/skygorae/raw/master/assets/preview.png">
+<img width=800 src="https://github.com/neony1027/skygorae/raw/main/assets/preview.png">
 
 # skygorae
 
 a dark, customizable discord theme.
 
-<img width=800 src="https://github.com/neony/skygorae/raw/master/assets/screenshot1.png">
+<img width=800 src="https://github.com/neony1027/skygorae/raw/main/assets/screenshot1.png">
 
-<img width=800 src="https://github.com/neony/skygorae/raw/master/assets/screenshot2.png">
+<img width=800 src="https://github.com/neony1027/skygorae/raw/main/assets/screenshot2.png">
 
-<img width=800 src="https://github.com/neony/skygorae/raw/master/assets/screenshot3.png">
+<img width=800 src="https://github.com/neony1027/skygorae/raw/main/assets/screenshot3.png">
 
 ## install
 
 ### vencord/betterdiscord (or any client that supports theme files)
 
-1. download the theme file, [`skygorae.theme.css`](https://github.com/neony/skygorae/blob/master/themes/skygorae.theme.css). (there should be a download button at the top right of the page)
+1. download the theme file, [`skygorae.theme.css`](https://github.com/neony1027/skygorae/blob/main/themes/skygorae.theme.css). (there should be a download button at the top right of the page)
 2. drag the file into your theme folder. (there should be a button to open the theme folder in theme settings)
 3. (optional) customize the theme by editing the options in `skygorae.theme.css`.
 
@@ -28,17 +28,17 @@ flavors are preset customizations for skygorae.
 
 to use a flavor, follow the install instructions above but download the flavor theme file of your choice instead of `skygorae.theme.css`.
 
-- [light](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-light.theme.css)
-- [auto (system theme)](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-auto.theme.css)
-- [background](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-background.theme.css) (background image + transparent blurred panels)
-- [catppuccin mocha](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-catppuccin-mocha.theme.css)
-- [catppuccin macchiato](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-catppuccin-macchiato.theme.css)
-- [nord](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-nord.theme.css)
-- [rose pine](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-rose-pine.theme.css)
-- [rose pine moon](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-rose-pine-moon.theme.css)
-- [tokyo night](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-tokyo-night.theme.css)
-- [lilypichu](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-lilypichu.theme.css)
-- [vencord](https://github.com/neony/skygorae/blob/master/themes/flavors/skygorae-vencord.theme.css)
+- [light](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-light.theme.css)
+- [auto (system theme)](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-auto.theme.css)
+- [background](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-background.theme.css) (background image + transparent blurred panels)
+- [catppuccin mocha](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-catppuccin-mocha.theme.css)
+- [catppuccin macchiato](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-catppuccin-macchiato.theme.css)
+- [nord](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-nord.theme.css)
+- [rose pine](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-rose-pine.theme.css)
+- [rose pine moon](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-rose-pine-moon.theme.css)
+- [tokyo night](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-tokyo-night.theme.css)
+- [lilypichu](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-lilypichu.theme.css)
+- [vencord](https://github.com/neony1027/skygorae/blob/main/themes/flavors/skygorae-vencord.theme.css)
 
 ## discord server
 
@@ -66,4 +66,4 @@ original design inspired by <https://github.com/schnensch0/zelk>
 
 window controls inspired by <https://github.com/Dyzean/Tokyo-Night>
 
-thanks to all the [contributors](https://github.com/neony/skygorae/graphs/contributors)!
+thanks to all the [contributors](https://github.com/neony1027/skygorae/graphs/contributors)!

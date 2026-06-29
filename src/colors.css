@@ -141,6 +141,12 @@
         --chat-background-default: var(--bg-3);
         --chat-border: lime;
         --chat-text-muted: var(--text-5);
+        --header-primary: var(--text-1);
+        --header-secondary: var(--text-2);
+        --header-muted: var(--text-4);
+        --text-normal: var(--text-2);
+        --text-primary: var(--text-1);
+        --text-secondary: var(--text-3);
         --checkbox-background-active: blue;
         --checkbox-background-default: var(--bg-2);
         --checkbox-background-hover: var(--bg-1);
@@ -563,8 +569,8 @@
         --user-profile-toolbar-background: var(--bg-3);
         --user-profile-toolbar-border: var(--border);
 
-        --white: var(--text-0);
-        --white-500: var(--text-0);
+        --white: var(--text-1);
+        --white-500: var(--text-1);
 
         --brand-260: var(--accent-2);
         --brand-360: var(--accent-2);
@@ -831,6 +837,17 @@
     .lookOutlined__201d5.colorWhite__201d5 /* outline buttons */ {
         border-color: var(--text-5);
         color: var(--text-3);
+    }
+
+    .container__37e49 /* user panel inner */ {
+        --header-primary: var(--text-1);
+        --text-strong: var(--text-1);
+        --text-default: var(--text-2);
+    }
+
+    .container__37e49 .container_df39b2 /* nameplate */ {
+        --header-primary: var(--text-1);
+        --text-strong: var(--text-1);
     }
 
     .container__37e49 /* user panel buttons */,

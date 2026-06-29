@@ -1,13 +1,10 @@
 /**
  * @name 하늘고래 (skygorae)
  * @description 하늘고래 테마 — 파스텔 스카이블루 & 라벤더 다크모드.
- * @author refact0r
+ * @author neony1027
  * @version 2.1.1
- * @invite nz87hXyvcy
- * @website https://github.com/neony/skygorae
- * @source https://github.com/neony/skygorae/blob/master/themes/skygorae.theme.css
- * @authorId 508863359777505290
- * @authorLink https://www.refact0r.dev
+ * @website https://github.com/neony1027/skygorae
+ * @source https://github.com/neony1027/skygorae/blob/main/themes/skygorae.theme.css
 */
 
 /* import theme modules */
@@ -23,6 +20,8 @@ body {
     --gap: 12px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --panel-glow: 0 0 10px hsla(210, 75%, 72%, 0.28), 0 0 22px hsla(280, 50%, 78%, 0.14);
+    --panel-glow-hover: 0 0 14px hsla(210, 80%, 76%, 0.42), 0 0 30px hsla(280, 55%, 82%, 0.22);
 
     /* animation/transition options */
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
@@ -44,8 +43,8 @@ body {
     --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
     --dms-icon-svg-url: url('../assets/whale.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--blue-3); /* normal icon color */
-    --dms-icon-color-after: var(--blue-1); /* icon color when button is hovered/selected */
+    --dms-icon-color-before: #fff; /* normal icon color */
+    --dms-icon-color-after: #000; /* icon color when button is hovered/selected */
     --custom-dms-background: color; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
@@ -76,7 +75,7 @@ body {
     --colors: on; /* off: discord default colors, on: skygorae custom colors */
 
     /* text colors */
-    --text-0: var(--bg-4); /* text on colored elements */
+    --text-0: var(--text-1); /* text on colored elements */
     --text-1: hsl(210, 28%, 93%); /* off-white, slight sky tint */
     --text-2: hsl(208, 32%, 80%); /* headings and important text */
     --text-3: hsl(212, 20%, 66%); /* normal text */
@@ -113,10 +112,10 @@ body {
     --offline: var(--text-4);
 
     /* border colors */
-    --border-light: hsla(210, 35%, 70%, 0.08);
-    --border: hsla(210, 40%, 65%, 0.14);
-    --border-hover: hsla(280, 30%, 72%, 0.18);
-    --button-border: hsla(210, 30%, 85%, 0.1);
+    --border-light: hsla(210, 55%, 78%, 0.3);
+    --border: hsla(210, 70%, 74%, 0.48);
+    --border-hover: hsla(280, 55%, 82%, 0.62);
+    --button-border: hsla(210, 45%, 88%, 0.14);
 
     /* base colors */
     --red-1: oklch(78% 0.1 15);

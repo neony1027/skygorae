@@ -1,3 +1,13 @@
+/**
+ * @name 하늘고래 (skygorae)
+ * @description 하늘고래 테마 — 파스텔 스카이블루 & 라벤더 다크모드.
+ * @author neony1027
+ * @version 2.1.1
+ * @website https://github.com/neony1027/skygorae
+ * @source https://github.com/neony1027/skygorae/blob/main/themes/skygorae.theme.css
+*/
+
+/* import theme modules */
 /* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -1824,7 +1834,7 @@ body {
 
 /* dms-button.css */
 body {
-    --dms-icon-svg-url: url('../assets/whale.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg%20height%3D%22800px%22%20width%3D%22800px%22%20version%3D%221.1%22%20id%3D%22_x32_%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20%0D%0A%09%20viewBox%3D%220%200%20512%20512%22%20%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0D%0A%09.st0%7Bfill%3A%23000000%3B%7D%0D%0A%3C%2Fstyle%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M439.56%2C144.813c-4.522-39.836-45.271-56.241-45.271-56.241s-11.198%2C32.337-6.79%2C63.267%0D%0A%09%09c5.351%2C37.514-41.853%2C77.837-141.994%2C77.837c0%2C0-192.823%2C0-231.951%2C0c-39.12%2C0%2C5.032%2C133.035%2C150.909%2C138.851%0D%0A%09%09c11.236%2C0.449%2C21.924%2C0.137%2C32.155-0.762c18.552%2C18.727%2C46.428%2C40.019%2C86.751%2C55.434c15.278%2C5.086%2C36.433-75.393-47.791-131.253%0D%0A%09%09l2.634-2.269c28.083%2C11.51%2C47.631%2C26.652%2C60.869%2C42.432c51.551-34.324%2C78.332-82.633%2C90.687-98.262%0D%0A%09%09c20.371-25.775%2C40.17-29.148%2C70.172-32.802C498.412%2C196.357%2C512%2C168.243%2C512%2C168.243S471.25%2C142.468%2C439.56%2C144.813z%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E"); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-subtle); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
@@ -2393,3 +2403,145 @@ body {
     }
 }
 
+
+
+body {
+    /* font options */
+    --font: 'figtree'; /* change to '' for default discord font */
+    --code-font: ''; /* change to '' for default discord font */
+    font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --panel-glow: 0 0 10px hsla(210, 75%, 72%, 0.28), 0 0 22px hsla(280, 50%, 78%, 0.14);
+    --panel-glow-hover: 0 0 14px hsla(210, 80%, 76%, 0.42), 0 0 30px hsla(280, 55%, 82%, 0.22);
+
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+    --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button options */
+    --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg%20height%3D%22800px%22%20width%3D%22800px%22%20version%3D%221.1%22%20id%3D%22_x32_%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20%0D%0A%09%20viewBox%3D%220%200%20512%20512%22%20%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0D%0A%09.st0%7Bfill%3A%23000000%3B%7D%0D%0A%3C%2Fstyle%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M439.56%2C144.813c-4.522-39.836-45.271-56.241-45.271-56.241s-11.198%2C32.337-6.79%2C63.267%0D%0A%09%09c5.351%2C37.514-41.853%2C77.837-141.994%2C77.837c0%2C0-192.823%2C0-231.951%2C0c-39.12%2C0%2C5.032%2C133.035%2C150.909%2C138.851%0D%0A%09%09c11.236%2C0.449%2C21.924%2C0.137%2C32.155-0.762c18.552%2C18.727%2C46.428%2C40.019%2C86.751%2C55.434c15.278%2C5.086%2C36.433-75.393-47.791-131.253%0D%0A%09%09l2.634-2.269c28.083%2C11.51%2C47.631%2C26.652%2C60.869%2C42.432c51.551-34.324%2C78.332-82.633%2C90.687-98.262%0D%0A%09%09c20.371-25.775%2C40.17-29.148%2C70.172-32.802C498.412%2C196.357%2C512%2C168.243%2C512%2C168.243S471.25%2C142.468%2C439.56%2C144.813z%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E"); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: #fff; /* normal icon color */
+    --dms-icon-color-after: #000; /* icon color when button is hovered/selected */
+    --custom-dms-background: color; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: linear-gradient(135deg, var(--blue-2), var(--purple-2)); /* fixed color/gradient (css background property) */
+
+    /* background image options */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+    /* chatbar options */
+    --custom-chatbar: off; /* off: default chatbar, separated: chatbar separated from chat */
+    --chatbar-height: 47px; /* height of the chatbar (56px by default, 47px to align with user panel, 56px recommended for separated) */
+
+    /* other options */
+    --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+}
+
+/* color options — skygorae: pastel sky blue & lavender on deep navy */
+:root {
+    --colors: on; /* off: discord default colors, on: skygorae custom colors */
+
+    /* text colors */
+    --text-0: var(--text-1); /* text on colored elements */
+    --text-1: hsl(210, 28%, 93%); /* off-white, slight sky tint */
+    --text-2: hsl(208, 32%, 80%); /* headings and important text */
+    --text-3: hsl(212, 20%, 66%); /* normal text */
+    --text-4: hsl(215, 16%, 46%); /* icon buttons and channels */
+    --text-5: hsl(220, 14%, 30%); /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: hsla(226, 18%, 21%, 1); /* dark buttons when clicked */
+    --bg-2: hsla(228, 20%, 17%, 1); /* dark buttons */
+    --bg-3: hsla(228, 22%, 14%, 1); /* spacing, secondary elements */
+    --bg-4: hsla(230, 24%, 11%, 1); /* main background color */
+    --hover: hsla(210, 45%, 72%, 0.09); /* channels and buttons when hovered */
+    --active: hsla(210, 50%, 68%, 0.17); /* channels and buttons when clicked or selected */
+    --active-2: hsla(280, 35%, 72%, 0.22); /* extra state for transparent buttons */
+    --message-hover: hsla(210, 30%, 60%, 0.06); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--blue-1); /* links and other accent text */
+    --accent-2: var(--blue-2); /* small accent elements */
+    --accent-3: var(--blue-3); /* accent buttons */
+    --accent-4: var(--blue-4); /* accent buttons when hovered */
+    --accent-5: var(--blue-5); /* accent buttons when clicked */
+    --accent-new: var(--purple-2); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 88%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--purple-2), transparent 94%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--blue-2), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+
+    /* status indicator colors */
+    --online: var(--green-2);
+    --dnd: var(--red-2);
+    --idle: var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline: var(--text-4);
+
+    /* border colors */
+    --border-light: hsla(210, 55%, 78%, 0.3);
+    --border: hsla(210, 70%, 74%, 0.48);
+    --border-hover: hsla(280, 55%, 82%, 0.62);
+    --button-border: hsla(210, 45%, 88%, 0.14);
+
+    /* base colors */
+    --red-1: oklch(78% 0.1 15);
+    --red-2: oklch(72% 0.1 15);
+    --red-3: oklch(66% 0.1 15);
+    --red-4: oklch(60% 0.09 15);
+    --red-5: oklch(54% 0.08 15);
+
+    --green-1: oklch(80% 0.08 170);
+    --green-2: oklch(74% 0.09 168);
+    --green-3: oklch(68% 0.09 166);
+    --green-4: oklch(62% 0.08 164);
+    --green-5: oklch(56% 0.07 162);
+
+    /* sky blue — keyboard modifier keys */
+    --blue-1: oklch(84% 0.07 235);
+    --blue-2: oklch(78% 0.08 232);
+    --blue-3: oklch(70% 0.09 230);
+    --blue-4: oklch(62% 0.09 228);
+    --blue-5: oklch(54% 0.08 226);
+
+    --yellow-1: oklch(84% 0.09 88);
+    --yellow-2: oklch(78% 0.09 86);
+    --yellow-3: oklch(72% 0.08 84);
+    --yellow-4: oklch(66% 0.08 82);
+    --yellow-5: oklch(60% 0.07 80);
+
+    /* lavender — keyboard Esc / Enter keys */
+    --purple-1: oklch(84% 0.06 295);
+    --purple-2: oklch(78% 0.07 292);
+    --purple-3: oklch(70% 0.08 290);
+    --purple-4: oklch(62% 0.08 288);
+    --purple-5: oklch(54% 0.07 286);
+}

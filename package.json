@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build": "node scripts/build.js",
+		"bundle": "node scripts/bundle-theme.js",
 		"dev": "node scripts/dev.js",
 		"serve": "node scripts/serve.js"
 	},
