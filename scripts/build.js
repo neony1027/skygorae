@@ -20,10 +20,38 @@ function validateSourceFiles() {
     }
 }
 
+function generateMenuStaggerCss(maxGroups = 12, maxItemsPerGroup = 8) {
+    const lines = [];
+
+    let index = 0;
+    for (let group = 1; group <= maxGroups; group++) {
+        for (let item = 1; item <= maxItemsPerGroup; item++) {
+            index += 1;
+            lines.push(
+                `    [class*='menu_'] [role='group']:nth-of-type(${group}) [role='menuitem']:nth-of-type(${item}),\n    [class*='menu_'] [role='group']:nth-of-type(${group}) [class*='item_'][id]:nth-of-type(${item}),\n    .menu_c1e9c4 [role='group']:nth-of-type(${group}) [role='menuitem']:nth-of-type(${item}) { animation-delay: calc((${index} - 1) * var(--context-menu-stagger)) !important; }`,
+            );
+        }
+    }
+
+    for (let item = 1; item <= 30; item++) {
+        lines.push(
+            `    [class*='menu_'] [class*='scroller'] > [role='menuitem']:nth-child(${item}),\n    [class*='menu_'] [class*='scroller'] > [class*='item_'][id]:nth-child(${item}),\n    .menu_c1e9c4 [class*='scroller'] > [role='menuitem']:nth-child(${item}) { animation-delay: calc((${item} - 1) * var(--context-menu-stagger)) !important; }`,
+        );
+    }
+
+    return `${lines.join('\n')}\n`;
+}
+
 function buildSource() {
     validateSourceFiles();
     const combined = config.sourceFiles
-        .map((file) => `/* ${file} */\n${fs.readFileSync(path.join(srcDir, file), 'utf8')}\n`)
+        .map((file) => {
+            let content = fs.readFileSync(path.join(srcDir, file), 'utf8');
+            if (file === 'animations.css') {
+                content = content.replace('/* SKYGORAE_MENU_STAGGER */', generateMenuStaggerCss());
+            }
+            return `/* ${file} */\n${content}\n`;
+        })
         .join('');
     fs.mkdirSync(path.dirname(buildFile), { recursive: true });
     fs.writeFileSync(buildFile, combined);

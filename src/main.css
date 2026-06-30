@@ -9,6 +9,7 @@
 
 body {
     container-name: body;
+    container-type: normal;
 
     /* font, change to '' for default discord font */
     --font: 'figtree';

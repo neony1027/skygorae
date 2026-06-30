@@ -25,9 +25,10 @@ body {
     --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
     --message-send-animation: on; /* off: disable outgoing message pop, on: rise from below */
     --message-send-duration: 0.52s;
-    --context-menu-animation: on; /* off: disable context menu pop, on: rows cascade from top */
+    --context-menu-animation: on; /* off: disable context menu pop, on: top-down stagger, each row slides left to right */
     --context-menu-duration: 0.38s;
-    --context-menu-stagger: 30ms;
+    --context-menu-duration: 0.32s;
+    --context-menu-stagger: 5ms;
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
     --border-hover-transition: 0.2s ease; /* transition for borders when hovered */

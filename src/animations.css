@@ -2,8 +2,8 @@ body {
     --list-item-transition: 0.2s ease; /* transition for list items */
     --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
     --message-send-duration: 0.52s; /* outgoing message rise duration */
-    --context-menu-duration: 0.38s; /* each context menu row slide duration */
-    --context-menu-stagger: 30ms; /* delay between each menu row */
+    --context-menu-duration: 0.32s; /* each context menu row slide duration */
+    --context-menu-stagger: 5ms;
 }
 
 @property --animations {
@@ -45,23 +45,39 @@ body {
     @keyframes skygorae-menu-item-slide {
         0% {
             opacity: 0;
-            transform: translateY(-8px);
+            transform: translateX(-12px);
         }
         100% {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
     }
 
-    [class*='menu_'][role='menu'] {
-        counter-reset: skygorae-menu-row;
+    [class*='menu_'] [role='menuitem'],
+    [class*='menu_'] [class*='item_'][id],
+    .menu_c1e9c4 [role='menuitem'],
+    .menu_c1e9c4 [class*='item_'][id],
+    [role='menu'] [role='menuitem'] {
+        animation: skygorae-menu-item-slide var(--context-menu-duration) ease-in-out both !important;
     }
 
-    [class*='menu_'][role='menu'] [role='menuitem'] {
-        opacity: 0;
-        animation: skygorae-menu-item-slide var(--context-menu-duration) ease-in-out forwards;
-        animation-delay: calc((counter(skygorae-menu-row) - 1) * var(--context-menu-stagger));
-        counter-increment: skygorae-menu-row;
+    /* SKYGORAE_MENU_STAGGER */
+
+    /* 앱 서브메뉴 · 봇 명령 리스트 */
+    [class*='menu_'][role='menu'] ~ [class*='menu_'][role='menu'] [role='menuitem'],
+    [class*='menu_'][role='menu'] ~ [class*='menu_'][role='menu'] [class*='item_'][id],
+    .menu_c1e9c4[role='menu'] ~ .menu_c1e9c4[role='menu'] [role='menuitem'],
+    .menu_c1e9c4[role='menu'] ~ .menu_c1e9c4[role='menu'] [class*='item_'][id],
+    [class*='subMenu'] [role='menuitem'],
+    [class*='subMenu'] [class*='item_'][id],
+    [class*='menu_'] [class*='menu_'][role='menu'] [role='menuitem'],
+    [class*='menu_'] [class*='menu_'][role='menu'] [class*='item_'][id],
+    [role='menuitem'][id*='-apps-'],
+    [role='menuitem'][id*='application-command'] {
+        animation: none !important;
+        animation-delay: 0ms !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 
